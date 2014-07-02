@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Contact & Social Media Info
-Plugin URI: http://rughsterdesign.com
+Plugin URI: https://github.com/peterugh/wp-contact-info
 Description: Set site wide contact and social media infomation
 Version: 0.1
 Author: Pete Rugh
 Author URI: http://rughsterdesign.com
-License: All Rights Reserved
+License: The MIT License (MIT)
 */
 
 /*  
