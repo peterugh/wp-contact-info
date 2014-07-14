@@ -49,6 +49,14 @@ class Contact_Info {
 		);
 		// Add field to Contact Info Section
 		add_settings_field(
+			'input_map_url',
+			'URL to Map (Google Maps, etc.)',
+			array($this, 'map_url_field'),
+			'contact_info',
+			'contact_info_section'
+		);
+		// Add field to Contact Info Section
+		add_settings_field(
 			'input_email_contact',
 			'Email - General',
 			array($this, 'email_contact_field'),
@@ -210,6 +218,11 @@ class Contact_Info {
 		$options = get_option('contact_options');
 		$prettyAddress = strip_tags($options['street_address']);
 		echo '<textarea id="input_street_address" name="contact_options[street_address]" rows="5" cols="40">' . $prettyAddress . '</textarea>';
+	}
+	public function map_url_field()
+	{
+		$options = get_option('contact_options');
+		echo '<input id="input_map_url" name="contact_options[map_url]" size="40" type="text" value="' . $options['map_url'] . '"/>';
 	}
 	public function email_contact_field()
 	{
